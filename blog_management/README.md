@@ -19,7 +19,7 @@ To Install the application on to your local machine go throgh the below steps:
 - Ready set Go!!
 
 ## admin panel user login details:
-- username: arora1703  password: 123456
+- username: abhi1703  password: 123456
 
 - username: mark1212 password: 123456
 
