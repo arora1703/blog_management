@@ -38,14 +38,14 @@
     title: "Good job!",
     text: "{{ Session::get('success') }}",
     icon: "success",
-    timer: 1500
+    timer: 3000
     });
     @elseif(Session::has('warning'))
     swal({
     title: "OOPsy!",
     text: "{{ Session::get('warning') }}",
     icon: "warning",
-    timer: 1500
+    timer: 3000
     });
     @elseif(Session::has('danger'))
     swal({

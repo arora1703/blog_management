@@ -129,6 +129,10 @@ class BlogController extends Controller
     }
     public function search(Request $request)
     {
+        if(($request->search=='search')&&($request->blog_title==NULL)&&($request->user_id==NULL)&&($request->category_id==NULL))
+        {
+            return redirect()->route('bloglist')->with('warning','Please select atleast one option to get Blog Data!!');
+        }
         if($request->search=='search')
         {
             $category=Category::all();
