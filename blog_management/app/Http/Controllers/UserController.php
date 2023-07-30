@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Models\User;
+use Illuminate\Http\RedirectResponse;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Hash;
 use Illuminate\Support\Facades\Session;
@@ -57,10 +58,14 @@ class UserController extends Controller
    public function logout()
    {
       if(Session::has('user_id'))
-      {
-         Session::pull('user_id');
-         return redirect('admin/signin');
-      }
+        {
+            session()->flush('user_id','name');
+            return redirect('index');
+        }
+        else
+        {
+            return redirect('/');
+        }
    }
     public function register(Request $request)
     {

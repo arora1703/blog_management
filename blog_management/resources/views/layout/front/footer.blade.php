@@ -25,6 +25,7 @@
 	<script src="{{asset('js/slick.min.js')}}"></script>
 	<script src="{{asset('js/fresco.min.js')}}"></script>
 	<script src="{{asset('js/main.js')}}"></script>
+	<script src="{{asset('js/like-dislike.js')}}"></script>
 	<script src="{{asset('admin/js/sweetalert.mis.js')}}"></script>
     <script>
     @if(Session::has('success'))

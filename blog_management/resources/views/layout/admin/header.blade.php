@@ -45,7 +45,7 @@
         <!-- Sidebar Start -->
         <div class="sidebar pe-4 pb-3">
             <nav class="navbar bg-secondary navbar-dark">
-                <a href="index.html" class="navbar-brand mx-4 mb-3">
+                <a href="{{route('dashboard')}}" class="navbar-brand mx-4 mb-3">
                     <h3 class="text-primary"><img class="rounded-circle" src="{{asset('admin/img/logo.jpg')}}" alt="" style="width: 120px; height: 40px;">BMS</h3>
                 </a>
                 <div class="d-flex align-items-center ms-4 mb-4">
@@ -60,10 +60,8 @@
                 <div class="navbar-nav w-100">
                     <a href="{{route('dashboard')}}" class="nav-item nav-link {{ request()->is('admin/dashboard') ? 'active' : '' }}"><i class="fa fa-tachometer-alt me-2"></i>Dashboard</a>
                     <a href="{{route('bloglist')}}" class="nav-item nav-link {{ request()->is('admin/blogs') ? 'active' : '' }}"><i class="fa fa-th me-2"></i>Blogs</a>
-                    <a href="{{url('admin/category')}}" class="nav-item nav-link {{ request()->is('admin/category') ? 'active' : '' }}"><i class="fa fa-keyboard me-2"></i>Category</a>
-                    <a href="{{url('admin/comments')}}" class="nav-item nav-link {{ request()->is('admin/comments') ? 'active' : '' }}"><i class="fa fa-list me-2"></i>Comments</a>
-                    <a href="{{url('admin/like_post')}}" class="nav-item nav-link {{ request()->is('admin/like_post') ? 'active' : '' }}"><i class="fa fa-thumbs-up me-2"></i>Like Post</a>
-                    
+                    <a href="{{route('category')}}" class="nav-item nav-link {{ request()->is('admin/category') ? 'active' : '' }}"><i class="fa fa-keyboard me-2"></i>Category</a>
+                    <a href="{{route('comments')}}" class="nav-item nav-link {{ request()->is('admin/comments') ? 'active' : '' }}"><i class="fa fa-list me-2"></i>Comments</a>
                 </div>
             </nav>
         </div>

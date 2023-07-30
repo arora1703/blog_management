@@ -24,5 +24,9 @@ class Blog extends Model
     {
         return $this->hasMany(Blogimage::class);
     }
+    public function likestatus()
+    {
+        return $this->hasMany(Likepost::class,'blog_blog_id','blog_id');
+    }
     
 }

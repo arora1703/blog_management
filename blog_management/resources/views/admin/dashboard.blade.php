@@ -7,7 +7,7 @@
                             <i class="fa fa-chart-line fa-3x text-primary"></i>
                             <div class="ms-3">
                                 <p class="mb-2">Total Blogs</p>
-                                <h6 class="mb-0">12</h6>
+                                <h6 class="mb-0">{{$blog_count}}</h6>
                             </div>
                         </div>
                     </div>
@@ -16,7 +16,7 @@
                             <i class="fa fa-chart-bar fa-3x text-primary"></i>
                             <div class="ms-3">
                                 <p class="mb-2">Total User</p>
-                                <h6 class="mb-0">12</h6>
+                                <h6 class="mb-0">{{$user_count}}</h6>
                             </div>
                         </div>
                     </div>
@@ -24,8 +24,8 @@
                         <div class="bg-secondary rounded d-flex align-items-center justify-content-between p-4">
                             <i class="fa fa-chart-area fa-3x text-primary"></i>
                             <div class="ms-3">
-                                <p class="mb-2">Today Comments</p>
-                                <h6 class="mb-0">123</h6>
+                                <p class="mb-2">Total Comments</p>
+                                <h6 class="mb-0">{{$comment_count}}</h6>
                             </div>
                         </div>
                     </div>
@@ -34,7 +34,7 @@
                             <i class="fa fa-chart-pie fa-3x text-primary"></i>
                             <div class="ms-3">
                                 <p class="mb-2">Total Like</p>
-                                <h6 class="mb-0">12/34</h6>
+                                <h6 class="mb-0"><i class="fa fa-thumbs-up"></i> {{$like_count[0]->total.'/'.$like_count[1]->total}} <i class="fa fa-thumbs-down"></i></h6>
                             </div>
                         </div>
                     </div>

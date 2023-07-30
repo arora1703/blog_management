@@ -1,5 +1,8 @@
 @include('layout.front.header')
 <!-- Blog Page -->
+    <input type="hidden" id="blog_id" value="{{$blog_data->blog_id}}">
+    <input type="hidden" id="user_id" value="{{Session::get('user_id')}}">
+    <input type="hidden" name="_token" id="csrf" value="{{Session::token()}}">
 	<div class="blog__single__page">
 		<div class="blog__slider">
 		@if(($blog_data['blogimage']->isEmpty()))
@@ -56,6 +59,18 @@
 				<div class="row">
 					<div class="col-md-6">
 						<div class="post__tags">
+                            <a title="Like" class="like 
+									@foreach($blog_data->likestatus as $likestatus)
+									@if(($likestatus->like_status==1)&&($likestatus->user_id==Session::get('user_id')))
+									{{__('active')}}
+									@endif
+									@endforeach" ><i class="fa fa-thumbs-up"></i></a>
+                            <a class="dislike 
+									@foreach($blog_data->likestatus as $likestatus)
+									@if(($likestatus->like_status==0)&&($likestatus->user_id==Session::get('user_id')))
+									{{__('active')}}
+									@endif
+									@endforeach" title="Dislike"><i class="fa fa-thumbs-down"></i></a>
 							<a href="#">Camera</a>
 							<a href="#">Photography</a>
 							<a href="#">Tips</a>
@@ -77,7 +92,7 @@
 				<h2>Leave a Comment</h2>
 				<form action="{{route('submit-comment')}}" method="post" class="comment__form">
 				@csrf
-				<input type="hidden" name="blog_id" value="{{$blog_data->blog_id}}">				
+				<input type="hidden" name="blog_id" value="{{$blog_data->blog_id}}">
 					<div class="row">
 						<div class="col-lg-6 ms-3">
 							<input type="text" class="form-control @error('name') mb-2  is-invalid @enderror" placeholder="Name" name="name" value={{old('name')}}>
