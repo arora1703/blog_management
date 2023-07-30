@@ -55,7 +55,7 @@
 				<ul class="nav__menu">
 					<li><a href="{{url('/')}}" class="{{ request()->is('/') ? 'menu--active' : '' }}">Home</a></li>
 					<li><a href="{{route('blogs')}}" class="{{ request()->is('blogs') ? 'menu--active' : (request()->is('blog_detail/*') ? 'menu--active' :'') }}">Blog</a></li>
-					<li><a href="" class="{{ request()->is('/') ? 'menu--active' : '' }}">Contact</a></li>
+					<li><a href="">Contact</a></li>
 				</ul>
 			</nav>
 		</div>

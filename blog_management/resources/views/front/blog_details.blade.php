@@ -18,7 +18,7 @@
 		@else
 			@foreach($blog_data['blogimage'] as $image)
 				<div class="blog__slider__item">
-					<img src="{{asset('uploads/blog_images').'/'.$image->image_deatils}}" alt="">
+					<img src="{{asset('uploads/blog_images').'/'.$image->image_deatils}}" width="580" height="350" alt="">
 				</div>
 			@endforeach
 		@endif
