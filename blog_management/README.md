@@ -3,7 +3,7 @@
 
 ## About Blog Management
 
-Blog Management is a application made on Laravel Version 10.
+Blog Management is an application made on Laravel Version 10.
 The Web Application is basically made for manage the blogs update or regular basis.
 
 - [Check the latest 5 Blogs](https://blogmanagement.blog/blogs).
