@@ -24,6 +24,7 @@ class BlogController extends Controller
             $likedislike->blog_blog_id=$request->blog_blog_id;
             $likedislike->user_id=$request->user_id;
             $likedislike->like_status=$request->like_status;
+            $likedislike->status=1;
             $likepost=$likedislike->save();
             if($likepost==true)
             {

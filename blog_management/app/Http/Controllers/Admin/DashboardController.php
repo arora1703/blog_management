@@ -17,6 +17,7 @@ class DashboardController extends Controller
         $user_count=User::count();
         $comment_count=Comment::count();
         $like_count=Likepost::groupBy('like_status')->orderBy('like_status','desc')->selectRaw('count(*) as total, like_status')->get();
+        // dd($like_count->toArray());
         return view('admin.dashboard',compact('blog_count','user_count','comment_count','like_count'));
     }
 }

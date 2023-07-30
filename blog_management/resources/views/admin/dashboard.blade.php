@@ -34,7 +34,7 @@
                             <i class="fa fa-chart-pie fa-3x text-primary"></i>
                             <div class="ms-3">
                                 <p class="mb-2">Total Like</p>
-                                <h6 class="mb-0"><i class="fa fa-thumbs-up"></i> {{$like_count[0]->total.'/'.$like_count[1]->total}} <i class="fa fa-thumbs-down"></i></h6>
+                                <h6 class="mb-0"><i class="fa fa-thumbs-up"></i> @if($like_count[0]){{$like_count[0]->total}}@endif / @if(!empty($like_count[1])){{$like_count[1]->total}}@endif <i class="fa fa-thumbs-down"></i></h6>
                             </div>
                         </div>
                     </div>
