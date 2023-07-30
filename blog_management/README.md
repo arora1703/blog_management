@@ -1,23 +1,33 @@
 <p align="center"><a href="https://blogmanagement.blog/" target="_blank"><img src="https://blogmanagement.blog/blog/public/img/logo.png" width="400" alt="Blogmanagement Logo"></a></p>
 
-<p align="center">
-<a href="https://github.com/laravel/framework/actions"><img src="https://github.com/laravel/framework/workflows/tests/badge.svg" alt="Build Status"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/dt/laravel/framework" alt="Total Downloads"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/v/laravel/framework" alt="Latest Stable Version"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/l/laravel/framework" alt="License"></a>
-</p>
 
-## About Laravel
+## About Blog Management
 
-Laravel is a web application framework with expressive, elegant syntax. We believe development must be an enjoyable and creative experience to be truly fulfilling. Laravel takes the pain out of development by easing common tasks used in many web projects, such as:
+Blog Management is a application made on Laravel Version 10.
+The Web Application is basically made for manage the blogs update or regular basis.
 
-- [Simple, fast routing engine](https://laravel.com/docs/routing).
-- [Powerful dependency injection container](https://laravel.com/docs/container).
-- Multiple back-ends for [session](https://laravel.com/docs/session) and [cache](https://laravel.com/docs/cache) storage.
-- Expressive, intuitive [database ORM](https://laravel.com/docs/eloquent).
-- Database agnostic [schema migrations](https://laravel.com/docs/migrations).
-- [Robust background job processing](https://laravel.com/docs/queues).
-- [Real-time event broadcasting](https://laravel.com/docs/broadcasting).
+- [Check the latest 5 Blogs](https://blogmanagement.blog/blogs).
+- [To Access the admin panel of the Blog Management](https://blogmanagement.blog/admin/signin).
+
+
+To Install the application on to your local machine go throgh the below steps:
+- clone the application use command:  git clone https://github.com/arora1703/blog_management.git
+- checkout the repo: cd blog_management
+- update the composer: composer update
+- run the migration with demo data: php artisan migrate:fresh --seed --force
+- run the serve command: php artisan serve
+- Ready set Go!!
+
+- admin panel user login details:
+- username: arora1703
+- password: 123456
+
+- username: mark1212
+- password: 123456
+
+- username: bruce1234
+- password: 123456
+
 
 Laravel is accessible, powerful, and provides tools required for large, robust applications.
 
