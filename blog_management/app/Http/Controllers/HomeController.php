@@ -25,7 +25,16 @@ class HomeController extends Controller
     {
         $blog_data=Blog::with('category','user','blogimage','likestatus')->where('blog_id',$id)->first();
         // dd($blog_data->toArray());
-        return view('front.blog_details',compact('blog_data'));
+        if($blog_data)
+        {
+            return view('front.blog_details',compact('blog_data'));
+        }
+        else
+        {
+            return redirect()->route('home')->with('warning','Did you really check the wrong Blog Details??');
+
+        }
+        
     }
     public function logout()
     {
